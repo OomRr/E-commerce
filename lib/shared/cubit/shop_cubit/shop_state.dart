@@ -10,5 +10,11 @@ class ShopHomeFailure extends ShopState {
   final String e;
 
   ShopHomeFailure(this.e);
+}class ShopCategoryLoading extends ShopState {}
+class ShopCategorySuccess extends ShopState {}
+class ShopCategoryFailure extends ShopState {
+  final String e;
+
+  ShopCategoryFailure(this.e);
 }
 class ShopBottomNav extends ShopState {}

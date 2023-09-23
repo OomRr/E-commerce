@@ -22,9 +22,11 @@ class Layout extends StatelessWidget {
             ),
             centerTitle: true,
             actions: [
-              IconButton(onPressed: (){
-                navigate(context, const SearchScreen());
-              }, icon: const Icon(Icons.search_rounded)),
+              IconButton(
+                  onPressed: () {
+                    navigate(context, const SearchScreen());
+                  },
+                  icon: const Icon(Icons.search_rounded)),
             ],
           ),
           body: cubit.screens[cubit.currentIndex],
@@ -34,6 +36,8 @@ class Layout extends StatelessWidget {
               cubit.changeBottomNavBar(index);
             },
             currentIndex: cubit.currentIndex,
+            type: BottomNavigationBarType.fixed,
+            unselectedItemColor: Colors.black,
             selectedIconTheme: const IconThemeData(size: 40),
           ),
         );
